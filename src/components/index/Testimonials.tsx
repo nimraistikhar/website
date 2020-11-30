@@ -80,6 +80,8 @@ const Testimonials: React.SFC<{}> = () => {
     const tweetsContainerRef = useRef<HTMLDivElement>(null)
     const cycles = Math.ceil(testimonials.length / 3)
 
+    console.log(cycles, testimonials.length)
+
     useEffect(() => {
         const tweetsContainer = tweetsContainerRef.current
         const dots = document.querySelectorAll('.dot')
@@ -92,16 +94,18 @@ const Testimonials: React.SFC<{}> = () => {
     })
 
     const switchTweets = (to: number) => {
-        const tweetsContainer = tweetsContainerRef.current
-        const cycleWidth = tweetsContainer?.scrollWidth / cycles
-        tweetsContainer.scroll({ left: parseFloat(cycleWidth * to), behavior: 'smooth' })
+        // const tweetsContainer = tweetsContainerRef.current
+        // const cycleWidth = tweetsContainer?.scrollWidth / cycles
+        // tweetsContainer.scroll({ left: parseFloat(cycleWidth * to), behavior: 'smooth' })
 
         // Older method which regards the actuals tweets and the space between them and not the width of .tweets
         
-        // const tweets = tweetsRef.current
-        // const firstTweet = tweets?.firstChild
-        // const spacing = getComputedStyle(firstTweet)['margin-right']
-        // const transform = firstTweet.offsetWidth * 3 + parseFloat(spacing.substring(0, spacing.length - 2)) * 2.8
+        const tweetsContainer = tweetsContainerRef.current
+        const tweets = tweetsRef.current
+        const firstTweet = tweets?.firstChild
+        const spacing = getComputedStyle(firstTweet)['margin-right']
+        const scrollBy = firstTweet.offsetWidth * 3 + parseFloat(spacing.substring(0, spacing.length - 2)) * 2.8
+        tweetsContainer.scroll({ left: parseFloat(scrollBy * to), behavior: 'smooth' })
     }
 
     return (
