@@ -10,7 +10,7 @@ const SelfHostedTermsPage: React.SFC<{}> = () => (
             <h3>1 Preamble</h3>
             <p>1.1 These Software Licensing Terms (“Terms”) provide the terms and conditions
             that govern usage of the Software Gitpod Self-Hosted Free Edition in source and
-            binary form (“Software”). The Software is provided by TypeFox GmbH, Am
+            binary form (“Software”). The Software is provided by Gitpod GmbH, Am
             Germaniahafen 1, 24143 Kiel (“TypeFox”). By downloading or using to the
     Software, you agree to be bound by the following Terms.</p>
             <h3>2 Scope of Terms</h3>
