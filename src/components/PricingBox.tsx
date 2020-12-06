@@ -241,7 +241,8 @@ const StyledPricingBox = styled.div<StyledPricingBoxProps>`
 
 export interface PricingBoxProps {
   title: string
-  img: JSX.Element
+  img?: JSX.Element
+  gatsbyImage?: JSX.Element
   price?: string | JSX.Element
   duration?: string
   feature?: string | JSX.Element
@@ -286,7 +287,8 @@ const PricingBox: React.SFC<PricingBoxProps> = ({
   info,
   areFeaturesBold,
   boldFeaturesCount = 0,
-  perUserMonth
+  perUserMonth,
+  gatsbyImage
 }) => (
   <StyledPricingBox
     transform={transform}
@@ -299,6 +301,7 @@ const PricingBox: React.SFC<PricingBoxProps> = ({
   >
     <h4>{title}</h4>
     {img ? img : null}
+    {gatsbyImage ? gatsbyImage : null}
     {price ? <div className="price">{price}</div> : null}
     { perUserMonth ? <div className="duration" style={{fontWeight: 400}}>per user/month</div> : null }
     {duration ? <div className="duration">{duration}</div> : null}

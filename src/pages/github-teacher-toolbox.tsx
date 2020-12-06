@@ -2,7 +2,6 @@ import React from 'react'
 
 import IndexLayout from '../layouts'
 import Banner from '../components/Banner'
-import TeacherBox from '../resources/teacher-box.png'
 import { isEurope } from '../utils/helpers'
 import Quote from '../components/Quote'
 import { PricingBoxProps } from '../components/PricingBox'
@@ -15,7 +14,7 @@ import { colors } from '../styles/variables'
 import OnBoarding from '../components/OnBoarding'
 import InfoCard from '../components/InfoCard'
 import Offers from '../components/Offers'
-
+import Img from 'gatsby-image'
 
 const offers: PricingBoxProps[] = [
     {
@@ -57,7 +56,7 @@ const offers: PricingBoxProps[] = [
     }
 ]
 
-const GithubTeacherToolBoxPage: React.SFC<{}> = () => (
+const GithubTeacherToolBoxPage: React.SFC<{}> = ({data}: any) => (
     <IndexLayout canonical="/github-teacher-toolbox/" title="GitHub Teacher Toolbox" description="With Gitpod you can create coding exams and exercises easily, help out your students via live tutoring, and benefit from a simple onboarding with any device.">
 
         <Banner
@@ -66,7 +65,7 @@ const GithubTeacherToolBoxPage: React.SFC<{}> = () => (
             paragraph={<span>With Gitpod you can create coding exams and exercises easily, help out your students via live tutoring, and benefit from a simple onboarding with any device. <Link to="/education">Learn more</Link></span>}
             linkPath="https://gitpod.io/subscription/"
             linkText="Claim Offer"
-            img={<img src={TeacherBox} alt="GitHub Teacher Toolbox" />}
+            img={<Img fluid={data.file.childImageSharp.fluid} alt="GitHub Teacher Toolbox" />}
         />
 
         <div className="grey-container">
@@ -94,5 +93,17 @@ const GithubTeacherToolBoxPage: React.SFC<{}> = () => (
         </div>
     </IndexLayout>
 )
+
+export const query = graphql`
+  query {
+    file(relativePath: { eq: "teacher-box.png" }) {
+        childImageSharp {
+            fluid(quality: 100, maxWidth: 1980) {
+                ...GatsbyImageSharpFluid
+            }
+        }
+    }
+  }
+`
 
 export default GithubTeacherToolBoxPage

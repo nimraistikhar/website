@@ -2,7 +2,6 @@ import React from 'react'
 
 import IndexLayout from '../layouts'
 import Banner from '../components/Banner'
-import BackPack from '../resources/backpack.svg'
 import { PricingBoxProps } from '../components/PricingBox'
 import { isEurope } from '../utils/helpers'
 import IconOpenSource from '../resources/icon-open-source.svg'
@@ -13,7 +12,7 @@ import PopOver from '../components/PopOver'
 import { colors } from '../styles/variables'
 import InfoCard from '../components/InfoCard'
 import Offers from '../components/Offers'
-
+import Img from 'gatsby-image'
 
 const offers: PricingBoxProps[] = [
     {
@@ -54,7 +53,7 @@ const offers: PricingBoxProps[] = [
     }
 ]
 
-const GithubStudentPackPage: React.SFC<{}> = () => (
+const GithubStudentPackPage: React.SFC<{}> = ({data}: any) => (
     <IndexLayout canonical="/github-student-developer-pack/" title="GitHub Student Developer Pack">
 
         <Banner
@@ -63,7 +62,7 @@ const GithubStudentPackPage: React.SFC<{}> = () => (
             paragraph={<span>With Gitpod you have no more tedious setups, you save hours of compiling code, and you can start coding from any device, immediately.</span>}
             linkPath="https://gitpod.io/subscription/"
             linkText="Claim Offer"
-            img={<img src={BackPack} alt="GitHub Backpack" />}
+            img={<Img fluid={data.file.childImageSharp.fluid} alt="GitHub Backpack" />}
         />
 
         <div className="grey-container">
@@ -88,3 +87,15 @@ const GithubStudentPackPage: React.SFC<{}> = () => (
 )
 
 export default GithubStudentPackPage
+
+export const query = graphql`
+  query {
+    file(relativePath: { eq: "backpack.png" }) {
+        childImageSharp {
+            fluid(quality: 100, maxWidth: 1980) {
+                ...GatsbyImageSharpFluid
+            }
+        }
+    }
+  }
+`

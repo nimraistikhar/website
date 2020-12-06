@@ -10,7 +10,7 @@ import { PricingBoxProps } from '../PricingBox'
 import PopOver from '../PopOver'
 import PricingBox from '../PricingBox'
 import { isEurope } from '../../utils/helpers'
-import Cloud from '../../resources/cloud.svg'
+import Cloud from '../../resources/self-hosted-cloud.png'
 import Tabs from './Tabs'
 import { Link } from 'gatsby'
 
