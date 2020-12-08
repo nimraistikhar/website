@@ -33,7 +33,7 @@ const PrivacyPage: React.SFC<{}> = () => (
                             <p>
                                 Gitpod GmbH<br /> Am Germaniahafen 1, 24143 Kiel/Germany<br /> registered with the commercial register of the local
 							court <em>(Amtsgericht)</em> Kiel under HRB 22228<br /> represented by the managing directors Sven Efftinge, Moritz
-							Eysholdt, Dr. Jan K&ouml;hnlein <br /> Phone: +49-431-99026870<br /> Email: contact@gitpod.io
+							Eysholdt, Dr. Jan K&ouml;hnlein <br /> Email: contact@gitpod.io
 						</p>
                             <p>We have appointed a data protection officer who may be contacted via <a href="mailto:data@gitpod.io">data@gitpod.io</a>.</p>
                             <p>This privacy policy also contains further data controllers.</p>

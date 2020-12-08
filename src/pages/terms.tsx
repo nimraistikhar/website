@@ -13,7 +13,7 @@ const TermsPage: React.SFC<{}> = () => (
             <p>
                 The provider of the internet services and other products supplied or provided available at gitpod.io (the <strong>"Website"</strong>
                     and together with the internet services and other products, the <strong>"Service"</strong>) is Gitpod GmbH, Am Germaniahafen
-                    1, 23143 Kiel, Germany, registered at the commercial registry of the district court of Kiel under HRB 22228, represented
+                    1, 24143 Kiel, Germany, registered at the commercial registry of the district court of Kiel under HRB 22228, represented
                         by the managing directors Sven Efftinge, Moritz Eysholdt, Dr. Jan Köhnlein (<strong>"Gitpod"</strong> or <strong>"we/our"</strong>).
                 </p>
             <p>
@@ -357,7 +357,7 @@ const TermsPage: React.SFC<{}> = () => (
                     </p>
                 <p>
                     Gitpod GmbH<br /> represented by: Sven Efftinge, Moritz Eysholdt, Dr. Jan K&ouml;hnlein<br /> Am Germaniahafen 1<br
-                    /> 23143 Kiel/Germany<br /> Phone: +49-431-99026870<br /> Email: contact@gitpod.io
+                    /> 24143 Kiel/Germany<br /> Email: contact@gitpod.io
                     </p>
                 <p>
                     of your decision to withdraw from this contract by an unequivocal statement (e.g. a letter sent by post, fax or e-mail).
@@ -505,7 +505,7 @@ const TermsPage: React.SFC<{}> = () => (
                     -- begin model withdrawal form --
                         </div>
                 <p>
-                    To<br /> Gitpod GmbH represented by: Sven Efftinge, Moritz Eysholdt, Dr. Jan Köhnlein<br /> Am Germaniahafen 1<br />				23143
+                    To<br /> Gitpod GmbH represented by: Sven Efftinge, Moritz Eysholdt, Dr. Jan Köhnlein<br /> Am Germaniahafen 1<br />				24143
                         Kiel/Germany
                             <br /> Phone: +49-431-99026870<br /> Email: contact@gitpod.io<br />
                 </p>

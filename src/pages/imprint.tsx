@@ -17,8 +17,7 @@ const ImprintPage: React.SFC<{}> = () => (
                 <p>VAT-ID :&nbsp;
                     <span>DE335127327</span>
                 </p>
-                <p>Phone:&nbsp;+49-431-99026870
-                    <br /> Email: contact@gitpod.io
+                <p>Email: contact@gitpod.io
                 </p>
                 <h4>Responsible for all content according to
                     <b>§ 55 Rundfunkstaatsvertrag (RSTV)</b>:
