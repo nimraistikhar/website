@@ -24,7 +24,7 @@ const FullAutomationGraphics = ({ renderedGraphic }: { renderedGraphic: string }
 
     return (
         graphics.map((g, i) => (
-            <ImageProvider key={i+g.name}  fileName={g.src} alt={g.alt} style={renderedGraphic !== g.name ? {display: 'none'}: {}} />
+            <ImageProvider isNotRelativeToGatsbyImgWrapper={true} key={i+g.name}  fileName={g.src} alt={g.alt} style={renderedGraphic !== g.name ? {display: 'none'}: {}} />
         ))
     )
 }

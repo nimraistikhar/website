@@ -50,7 +50,7 @@ export const features: FeatureCardProps[] = [
   },
   {
     id: 'teams-together',
-    gatsbyImage: <ImageProvider fileName='collaboration-placeholder.png' alt="Collaboration" />,
+    gatsbyImage: <ImageProvider isNotRelativeToGatsbyImgWrapper={true} fileName='collaboration-placeholder.png' alt="Collaboration" />,
     title: (
       <strong>
         Where Teams
@@ -85,7 +85,7 @@ export const features: FeatureCardProps[] = [
     )
   },
   {
-    gatsbyImage: <ImageProvider fileName='ipad.png' alt="Gitpod on an iPad" />,
+    gatsbyImage: <ImageProvider isNotRelativeToGatsbyImgWrapper={true} fileName='ipad.png' alt="Gitpod on an iPad" />,
     title: <strong>Remote-first. Secure by Design.</strong>,
     text: (
       <>
@@ -98,7 +98,7 @@ export const features: FeatureCardProps[] = [
     )
   },
   {
-      gatsbyImage: <ImageProvider fileName="kubernetes-graphic.png" alt="Kubernetes" />,
+      gatsbyImage: <ImageProvider isNotRelativeToGatsbyImgWrapper={true} fileName="kubernetes-graphic.png" alt="Kubernetes" />,
     alt: '',
     title: <strong>Cloud Native Development Done Right</strong>,
     text: (

@@ -62,6 +62,6 @@ export const features: FeatureCardProps[] = [
         </ul>
       </>
     ),
-    gatsbyImage: <ImageProvider fileName="stay-in-flow.png" alt="Git Platforms" />,
+    gatsbyImage: <ImageProvider isNotRelativeToGatsbyImgWrapper={true} fileName="stay-in-flow.png" alt="Git Platforms" />,
   }
 ]

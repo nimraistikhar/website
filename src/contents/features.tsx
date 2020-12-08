@@ -42,7 +42,7 @@ export const features: FeatureCardProps[] = [
         ></path>
       </svg>
     ),
-    gatsbyImage: <ImageProvider fileName="prebuilt-workspaces.png" alt="Prebuilt Workspaces" />
+    gatsbyImage: <ImageProvider isNotRelativeToGatsbyImgWrapper={true} fileName="prebuilt-workspaces.png" alt="Prebuilt Workspaces" />
   },
   {
     id: 'parallel',
@@ -76,7 +76,7 @@ export const features: FeatureCardProps[] = [
         Workspaces
       </span>
     ),
-    gatsbyImage: <ImageProvider fileName='parallel-workspaces.png' alt="Parallel Workspaces"/>,
+    gatsbyImage: <ImageProvider isNotRelativeToGatsbyImgWrapper={true} fileName='parallel-workspaces.png' alt="Parallel Workspaces"/>,
   },
   {
     id: 'disposable',
@@ -111,7 +111,7 @@ export const features: FeatureCardProps[] = [
         ></path>
       </svg>
     ),
-    gatsbyImage: <ImageProvider fileName="disposable.jpg" alt="Ephemeral Workspaces" />
+    gatsbyImage: <ImageProvider isNotRelativeToGatsbyImgWrapper={true} fileName="disposable.jpg" alt="Ephemeral Workspaces" />
   },
   {
     id: 'vs',
@@ -153,7 +153,7 @@ export const features: FeatureCardProps[] = [
         Extensions
       </span>
     ),
-    gatsbyImage: <ImageProvider fileName="vscode-extensions.png" alt="VS Code Extensions"/>
+    gatsbyImage: <ImageProvider isNotRelativeToGatsbyImgWrapper={true} fileName="vscode-extensions.png" alt="VS Code Extensions"/>
   },
   {
     id: 'deep-integrations',
@@ -204,7 +204,7 @@ export const features: FeatureCardProps[] = [
         Integrations
       </span>
     ),
-    gatsbyImage: <ImageProvider fileName="stay-in-flow.png" alt="Git Platforms" />
+    gatsbyImage: <ImageProvider isNotRelativeToGatsbyImgWrapper={true} fileName="stay-in-flow.png" alt="Git Platforms" />
   },
   {
     id: 'share',
@@ -241,7 +241,7 @@ export const features: FeatureCardProps[] = [
         Workspaces
       </span>
     ),
-    gatsbyImage: <ImageProvider fileName="shared-workspaces.png" alt="Share Running Workspaces" />
+    gatsbyImage: <ImageProvider isNotRelativeToGatsbyImgWrapper={true} fileName="shared-workspaces.png" alt="Share Running Workspaces" />
   },
   {
     id: 'snapshot',
@@ -273,7 +273,7 @@ export const features: FeatureCardProps[] = [
       </svg>
     ),
     iconTitle: 'Snapshots',
-    gatsbyImage: <ImageProvider fileName="workspace-snapshot.png" alt="Create A Snapshot" />
+    gatsbyImage: <ImageProvider isNotRelativeToGatsbyImgWrapper={true} fileName="workspace-snapshot.png" alt="Create A Snapshot" />
   },
   {
     id: 'code-review',
@@ -320,7 +320,7 @@ export const features: FeatureCardProps[] = [
         Reviews
       </span>
     ),
-    gatsbyImage: <ImageProvider fileName="code-review.png" alt="Code Review"/>
+    gatsbyImage: <ImageProvider isNotRelativeToGatsbyImgWrapper={true} fileName="code-review.png" alt="Code Review"/>
   },
   {
     id: 'linux',
@@ -355,7 +355,7 @@ export const features: FeatureCardProps[] = [
         Terminals
       </span>
     ),
-    gatsbyImage: <ImageProvider fileName="linux-terminal.png" alt="Linux Terminals" />
+    gatsbyImage: <ImageProvider isNotRelativeToGatsbyImgWrapper={true} fileName="linux-terminal.png" alt="Linux Terminals" />
   },
   {
     id: 'intelligence',

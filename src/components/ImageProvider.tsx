@@ -12,10 +12,11 @@ const StyledImageProvider = styled.div`
 interface ImageProviderProps {
     fileName: string
     alt: string
-    style?: CSSProperties
+    wrapperStyle?: CSSProperties
+    isNotRelativeToGatsbyImgWrapper?: boolean
 }
 
-const ImageProvider = ({ fileName, alt, style }: ImageProviderProps) => {
+const ImageProvider = ({ fileName, alt, wrapperStyle, isNotRelativeToGatsbyImgWrapper }: ImageProviderProps) => {
   const { allImageSharp } = useStaticQuery(graphql`
     query {
       allImageSharp {
@@ -33,9 +34,14 @@ const ImageProvider = ({ fileName, alt, style }: ImageProviderProps) => {
   const fluid = allImageSharp.nodes.find((n: any) => n.fluid.originalName === fileName)
     .fluid
 
+  const imageStylesIfIsNotRelativeToGatsbyImgWrapper = {
+    top: '50%', 
+    transform: 'translateY(-50%) scale(.93)',
+  };
+
   return (
     <StyledImageProvider>
-      <Img className="gatsby-image" fluid={fluid} alt={alt} style={{...style, position: 'none'}} imgStyle={{top: '50%', transform: 'translateY(-50%) scale(.93)'}} />
+      <Img className="gatsby-image" fluid={fluid} alt={alt} style={{position: isNotRelativeToGatsbyImgWrapper ? 'none' : 'relative', ...wrapperStyle}} imgStyle={isNotRelativeToGatsbyImgWrapper ? imageStylesIfIsNotRelativeToGatsbyImgWrapper : {}} />
     </StyledImageProvider>
   )
 }

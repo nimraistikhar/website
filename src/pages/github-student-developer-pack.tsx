@@ -4,7 +4,7 @@ import IndexLayout from '../layouts'
 import Banner from '../components/Banner'
 import { PricingBoxProps } from '../components/PricingBox'
 import { isEurope } from '../utils/helpers'
-import IconOpenSource from '../resources/icon-open-source.svg'
+import FreePricing from '../resources/free-pricing.png'
 import Quote from '../components/Quote'
 import Bag from '../resources/icon-backpack.svg'
 import Rocket from '../resources/icon-rocket.svg'
@@ -13,11 +13,12 @@ import { colors } from '../styles/variables'
 import InfoCard from '../components/InfoCard'
 import Offers from '../components/Offers'
 import Img from 'gatsby-image'
+import { graphql } from 'gatsby'
 
 const offers: PricingBoxProps[] = [
     {
         title: 'Open-Source',
-        img: <object role="presentation" tabIndex={-1} data={IconOpenSource} />,
+        img: <img src={FreePricing} alt="Heart" />,
         price: 'Free',
         duration: '50 hours / month',
         hideButton: true,
